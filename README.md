@@ -32,6 +32,7 @@ The analysis follows the Box-Jenkins ARIMA framework:
 8. Residual diagnostics
 9. Forecasting
 
+## Results
 ### Candidate Models
 Three ARIMA models were evaluated based on Mean Squared Error (MSE).
 | Model | MSE with Constant | MSE without Constant |
@@ -44,30 +45,31 @@ Three ARIMA models were evaluated based on Mean Squared Error (MSE).
 ARIMA(0,1,2) was selected because it produced the lowest MSE among
 the candidate models, both with and without a constant term.
 
-## Results
-### Selected Model
-**ARIMA(0,1,2)**
-The selected model was considered suitable for forecasting based
-on residual diagnostics. The residual scatter plot appeared random,
-while the residual ACF and PACF did not show significant
-autocorrelation.
-
 ### Forecast
-The model was used to forecast Indonesia's non-oil export value
-for April 2024.
 
-**Forecasted value: 20,297.0 million USD**
-The Minitab forecasting result was consistent with the manual
-calculation.
+The selected ARIMA(0,1,2) model was used to forecast Indonesia's
+non-oil export value.
+
+| Period | Forecast (million USD) | Lower 95% Limit | Upper 95% Limit |
+|---:|---:|---:|---:|
+| 40 | 20,297.0 | 16,306.2 | 24,287.9 |
+| 41 | 20,176.1 | 15,618.7 | 24,733.5 |
+| 42 | 20,176.1 | 15,201.6 | 25,150.7 |
+| 43 | 20,176.1 | 14,816.8 | 25,535.4 |
+| 44 | 20,176.1 | 14,457.9 | 25,894.4 |
+| 45 | 20,176.1 | 14,120.2 | 26,232.0 |
+| 46 | 20,176.1 | 13,800.4 | 26,551.9 |
+| 47 | 20,176.1 | 13,495.8 | 26,856.4 |
+| 48 | 20,176.1 | 13,204.6 | 27,147.7 |
 
 <img width="590" height="227" alt="image" src="https://github.com/user-attachments/assets/7e1acc3a-d488-4bce-befa-0c3a0f400968" />
 <img width="1535" height="1024" alt="image" src="https://github.com/user-attachments/assets/1721ca30-b1c5-4acc-afb5-aae839c333fe" />
 
 ## Key Findings
-The ARIMA(0,1,2) model provides a forecast of approximately
-**20.297 billion USD** for Indonesia's non-oil exports in April 2024.
-The analysis demonstrates the application of time series modeling,
-model selection, residual diagnostics, and forecasting using Minitab.
+- **Forecast for April 2024:** 20,297.0 million USD.
+- The ARIMA(0,1,2) forecast is consistent with the manual calculation.
+- April 2024 represents the **highest forecasted value** among the forecast periods, before the forecast stabilizes at approximately 20,176.1 million USD.
+- The April 2024 forecast is lower than the actual March 2024 export value of **21,253.6 million USD**..
 
 ## Tools
 - Minitab
