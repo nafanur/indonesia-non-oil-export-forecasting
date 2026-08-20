@@ -33,13 +33,16 @@ The analysis follows the Box-Jenkins ARIMA framework:
 9. Forecasting
 
 ### Candidate Models
-The following ARIMA models were considered:
-- ARIMA(1,1,0)
-- ARIMA(0,1,2)
-- ARIMA(1,1,2)
+Three ARIMA models were evaluated based on Mean Squared Error (MSE).
+| Model | MSE with Constant | MSE without Constant |
+|---|---:|---:|
+| ARIMA(1,1,0) | 4,497,421 | 4,422,546 |
+| ARIMA(1,1,2) | 4,288,129 | 4,240,064 |
+| **ARIMA(0,1,2)** | **4,187,520** | **4,144,165** |
 
-Based on the MSE comparison, ARIMA(0,1,2) was selected as the
-forecasting model.
+**Selected Model:** ARIMA(0,1,2)
+ARIMA(0,1,2) was selected because it produced the lowest MSE among
+the candidate models, both with and without a constant term.
 
 ## Results
 ### Selected Model
